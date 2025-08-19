@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -106,9 +105,9 @@ export default function SalesPredictionTool() {
         <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-2 mb-4">
             <TrendingUp className="h-8 w-8 text-white" />
-            <h1 className="text-4xl font-bold text-white">Sales Prediction Tool</h1>
+            <h1 className="text-7xl font-condenso text-white">Sales Prediction Tool</h1>
           </div>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto font-gunken">
             Forecast your sales performance based on advertising budget allocation across TV, Radio, and Newspaper
             channels
           </p>
@@ -117,8 +116,8 @@ export default function SalesPredictionTool() {
         <div className="max-w-2xl mx-auto">
           <Card className="shadow-2xl border border-white/20 bg-white/10 backdrop-blur-md">
             <CardHeader className="text-center pb-6">
-              <CardTitle className="text-2xl text-white">Enter Your Advertising Budgets</CardTitle>
-              <CardDescription className="text-white/80">
+              <CardTitle className="text-5xl text-white font-lemon">Enter Your Advertising Budgets</CardTitle>
+              <CardDescription className="text-white/80 font-gunken text-base tracking-wide">
                 Input your planned advertising spend in thousands of dollars for each channel
               </CardDescription>
             </CardHeader>
@@ -127,8 +126,8 @@ export default function SalesPredictionTool() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* TV Budget Input */}
                 <div className="space-y-2">
-                  <Label htmlFor="tv" className="text-sm font-medium text-white flex items-center gap-2">
-                    <Tv className="h-4 w-4 text-white" />
+                  <Label htmlFor="tv" className="font-lemon tracking-wide text-3xl text-white flex items-center gap-2">
+                    <Tv className="h-4 w-4 text-white " />
                     TV Ad Budget ($1000s)
                   </Label>
                   <Input
@@ -139,14 +138,14 @@ export default function SalesPredictionTool() {
                     placeholder="e.g., 100.5"
                     value={formData.tv}
                     onChange={(e) => handleInputChange("tv", e.target.value)}
-                    className="h-12 text-lg bg-white/20 backdrop-blur-sm border-white/30 text-white placeholder:text-white/60 focus:ring-white/50 focus:border-white/50"
+                    className=" font-epoch h-12 text-lg bg-white/20 backdrop-blur-sm border-white/30 text-white placeholder:text-white/60 focus:ring-white/50 focus:border-white/50"
                     required
                   />
                 </div>
 
                 {/* Radio Budget Input */}
                 <div className="space-y-2">
-                  <Label htmlFor="radio" className="text-sm font-medium text-white flex items-center gap-2">
+                  <Label htmlFor="radio" className="font-lemon tracking-wide text-3xl font-medium text-white flex items-center gap-2">
                     <Radio className="h-4 w-4 text-white" />
                     Radio Ad Budget ($1000s)
                   </Label>
@@ -158,14 +157,14 @@ export default function SalesPredictionTool() {
                     placeholder="e.g., 50.2"
                     value={formData.radio}
                     onChange={(e) => handleInputChange("radio", e.target.value)}
-                    className="h-12 text-lg bg-white/20 backdrop-blur-sm border-white/30 text-white placeholder:text-white/60 focus:ring-white/50 focus:border-white/50"
+                    className="font-epoch h-12 text-lg bg-white/20 backdrop-blur-sm border-white/30 text-white placeholder:text-white/60 focus:ring-white/50 focus:border-white/50"
                     required
                   />
                 </div>
 
                 {/* Newspaper Budget Input */}
-                <div className="space-y-2">
-                  <Label htmlFor="newspaper" className="text-sm font-medium text-white flex items-center gap-2">
+                <div className="space-y-2 ">
+                  <Label htmlFor="newspaper" className="font-lemon tracking-wide text-3xl font-medium text-white flex items-center gap-2">
                     <Newspaper className="h-4 w-4 text-white" />
                     Newspaper Ad Budget ($1000s)
                   </Label>
@@ -177,7 +176,7 @@ export default function SalesPredictionTool() {
                     placeholder="e.g., 25.8"
                     value={formData.newspaper}
                     onChange={(e) => handleInputChange("newspaper", e.target.value)}
-                    className="h-12 text-lg bg-white/20 backdrop-blur-sm border-white/30 text-white placeholder:text-white/60 focus:ring-white/50 focus:border-white/50"
+                    className="font-epoch h-12 text-lg bg-white/20 backdrop-blur-sm border-white/30 text-white placeholder:text-white/60 focus:ring-white/50 focus:border-white/50"
                     required
                   />
                 </div>
@@ -187,7 +186,7 @@ export default function SalesPredictionTool() {
                   <Button
                     type="submit"
                     disabled={isLoading}
-                    className="flex-1 h-12 text-lg font-semibold bg-white/90 hover:bg-white text-black border-0 backdrop-blur-sm"
+                    className="flex-1 h-12 font-copixel text-xl bg-white/90 hover:bg-white text-black border-0 backdrop-blur-sm"
                   >
                     {isLoading ? (
                       <>
@@ -206,7 +205,7 @@ export default function SalesPredictionTool() {
                     type="button"
                     variant="outline"
                     onClick={handleReset}
-                    className="h-12 px-6 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 hover:text-white"
+                    className="h-12 font-copixel text-base px-6 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 hover:text-white"
                   >
                     Reset
                   </Button>
@@ -218,12 +217,12 @@ export default function SalesPredictionTool() {
                 <div className="mt-8 p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
                   <div className="flex items-center gap-2 mb-3">
                     <CheckCircle className="h-6 w-6 text-white" />
-                    <h3 className="text-lg font-semibold text-white">Prediction Complete</h3>
+                    <h3 className="text-lg text-white font-gunken">Prediction Complete</h3>
                   </div>
-                  <div className="text-3xl font-bold text-white mb-2">
+                  <div className="text-4xl font-epoch text-white mb-2">
                     Predicted Sales: ${result.prediction.toFixed(2)} thousand
                   </div>
-                  <p className="text-sm text-white/80">
+                  <p className="text-base text-white/70 font-epoch tracking-wide">
                     This prediction is based on your advertising budget allocation and historical sales data patterns.
                   </p>
                 </div>
@@ -239,8 +238,8 @@ export default function SalesPredictionTool() {
 
               {/* Helper Text */}
               <div className="mt-8 p-4 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
-                <h4 className="font-medium text-white mb-2">💡 Tips for Better Predictions</h4>
-                <ul className="text-sm text-white/80 space-y-1">
+                <h4 className="font-medium text-white mb-2 font-copixel">💡 Tips for Better Predictions</h4>
+                <ul className="text-2sm text-white/80 space-y-1 font-epoch tracking-wide">
                   <li>• Enter budgets in thousands of dollars (e.g., 100 = $100,000)</li>
                   <li>• Typical TV budgets range from 50-300 thousand</li>
                   <li>• Radio budgets typically range from 20-150 thousand</li>
@@ -253,7 +252,6 @@ export default function SalesPredictionTool() {
 
         {/* Footer */}
         <footer className="text-center mt-12 text-white">
-          <p className="text-sm">Sales Prediction Tool • Powered by Machine Learning Analytics</p>
         </footer>
       </div>
     </div>

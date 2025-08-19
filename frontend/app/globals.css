@@ -3,6 +3,19 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@layer base {
+  :root {
+    --font-condenso: '';
+    --font-copixel: '';
+    --font-epoch: '';
+    --font-ezonix: '';
+    --font-gunken: '';
+    --font-highrise: '';
+    --font-lemon: '';
+    --font-roxhead: '';
+  }
+}
+
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -119,5 +132,57 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Base fonts */
+  .font-condenso {
+    font-family: var(--font-condenso);
+  }
+  
+  .font-copixel {
+    font-family: var(--font-copixel);
+  }
+  
+  .font-epoch {
+    font-family: var(--font-epoch);
+  }
+  
+  .font-ezonix {
+    font-family: var(--font-ezonix);
+  }
+  
+  .font-gunken {
+    font-family: var(--font-gunken);
+  }
+  
+  .font-highrise {
+    font-family: var(--font-highrise);
+  }
+  
+  .font-lemon {
+    font-family: var(--font-lemon);
+  }
+  
+  .font-roxhead {
+    font-family: var(--font-roxhead);
+  }
+
+  /* Font variants */
+  .font-ezonix.italic {
+    font-style: italic;
+  }
+
+  .font-highrise.font-bold {
+    font-weight: 700;
+  }
+
+  .font-highrise-condensed {
+    font-family: var(--font-highrise);
+    font-style: condensed;
+  }
+
+  .font-lemon-wide {
+    font-family: var(--font-lemon);
+    font-style: wide;
   }
 }
