@@ -68,15 +68,15 @@ export default function SalesPredictionTool() {
     setResult(null)
 
     try {
-      const response = await fetch("https://your-vercel-api-endpoint.vercel.app/api/predict", {
+      const response = await fetch("https://thorough-manifestation-production.up.railway.app/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          tv: Number.parseFloat(formData.tv),
-          radio: Number.parseFloat(formData.radio),
-          newspaper: Number.parseFloat(formData.newspaper),
+          TV: Number.parseFloat(formData.tv),
+          Radio: Number.parseFloat(formData.radio),
+          Newspaper: Number.parseFloat(formData.newspaper),
         }),
       })
 
